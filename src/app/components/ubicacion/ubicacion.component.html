@@ -1,0 +1,11 @@
+<h2> {{ nombre }} </h2>
+<ol>
+    <li>Zona: {{zona}}</li>
+    <li>Descripcion: {{ descripcion }}</li>
+    <li>Encargado: {{encargado}}</li>
+    <li>
+        <span *ngIf="abierto == true">Abierto</span>
+        <span *ngIf="abierto == !true">Cerradi</span>
+    </li>
+</ol>
+
