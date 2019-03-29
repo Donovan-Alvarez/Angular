@@ -6,8 +6,28 @@
 <hr>
 <p>
     Nombre de ubicacion:
-    <input type="text" [(ngModel)]="nombreDeUbicacion">
+    <input type="text" [(ngModel)]="nombreDeUbicacion" (keyup)="mostrarNombre()" >
 </p>
-Hijo:
-<ubicacion></ubicacion>
+<p>
+    Resultado: {{nombreDeUbicacion}}
+</p>
+
+
+Hijo
+
+<div *ngIf="miUbicacion">
+        <h4>Datos de la ubicacion traidos desde el hijo</h4>
+            <ol>
+                <li> {{ miUbicacion.nombre }} </li>
+            </ol>
+    </div>
+
+
+
+
+<p *ngIf="nombreDeUbicacion">
+<ubicacion [nombre]="nombreDeUbicacion"(pasameLosDatos)="verDatosUbicacion($event)">
+ 
+</ubicacion>
+</p>
 <hr>
